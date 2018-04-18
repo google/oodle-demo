@@ -20,10 +20,6 @@
 
 <script>
 import './theme.scss'
-// import 'vue-mdc-adapter/dist/styles.scss'
-import Vue from 'vue'
-import VueMDCAdapter from 'vue-mdc-adapter'
-Vue.use(VueMDCAdapter)
 
 export default {
   name: 'App',
