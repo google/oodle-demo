@@ -10,6 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const Renderer = PrerenderSpaPlugin.PuppeteerRenderer
 
 const env = require('../config/prod.env')
 
@@ -106,6 +108,16 @@ const webpackConfig = merge(baseWebpackConfig, {
       async: 'vendor-async',
       children: true,
       minChunks: 3
+    }),
+
+    new PrerenderSpaPlugin({
+      // Path to compiled app
+      staticDir: path.join(__dirname, '../dist'),
+      // List of endpoints you wish to prerender
+      routes: ['/'],
+      renderer: new Renderer({
+        renderAfterElementExists: '.doodle-header'
+      })
     }),
 
     // copy custom static assets

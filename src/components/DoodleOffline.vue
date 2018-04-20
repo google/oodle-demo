@@ -5,9 +5,6 @@
         <iframe src="/static/ponyexpress15.htm" frameborder="0"  scrolling="no" height="240px" width="420px" ></iframe>
       </div>
     </div>
-
-
-
     <section class="doodle-info-link" @click="showModal = true">
       <p><i class="material-icons">info</i> Learn more</p>
     </section>
