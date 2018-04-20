@@ -13,6 +13,7 @@
   "dependencies": {
     "material-components-web": "^0.34.1",
     "node-sass": "^4.8.3",
+    "prerender-spa-plugin": "^3.0.0",
     "sass-loader": "^6.0.7",
     "slug": "^0.9.1",
     "vue": "^2.5.2",
