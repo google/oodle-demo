@@ -3,5 +3,69 @@ $mdc-theme-primary: #212121;
 $mdc-theme-accent: #41b883;
 $mdc-theme-background: #fff;
 
+.mdc-button .mdc-button__icon, .mdc-button .mdc-icon {
+    margin-left: 0;
+    margin-right: 8px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    vertical-align: top;
+}
 
-@import 'vue-mdc-adapter/dist/vue-mdc-adapter.css';
+.film-controls .mdc-button {
+    font-size: 32px;
+    color: #fff;
+}
+.mdc-button.mdc-ripple-upgraded {
+    --mdc-ripple-fg-opacity: 0.16;
+}
+
+.mdc-button:not(:disabled) {
+    color: #6200ee;
+    color: var(--mdc-theme-primary,#6200ee);
+}
+.mdc-button:disabled, .mdc-button:not(:disabled) {
+    background-color: transparent;
+}
+.mdc-button {
+    font-family: Roboto,sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: .875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    text-decoration: none;
+    text-transform: uppercase;
+    --mdc-ripple-fg-size: 0;
+    --mdc-ripple-left: 0;
+    --mdc-ripple-top: 0;
+    --mdc-ripple-fg-scale: 1;
+    --mdc-ripple-fg-translate-end: 0;
+    --mdc-ripple-fg-translate-start: 0;
+    -webkit-tap-highlight-color: transparent;
+    will-change: transform,opacity;
+    padding-right: 8px;
+    padding-left: 8px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    position: relative;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-width: 64px;
+    height: 36px;
+    border: none;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    overflow: hidden;
+    vertical-align: middle;
+    border-radius: 2px;
+}
