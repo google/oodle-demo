@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import slug from 'slug'
+import slug from 'slugify'
 
 export default {
   name: 'DoodleSlider',
