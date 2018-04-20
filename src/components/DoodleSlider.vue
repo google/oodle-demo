@@ -21,8 +21,8 @@
     </div>
   </div>
   <div class="film-controls">
-    <mdc-button @click="index -= 1"><i class="material-icons mdc-button__icon">fast_rewind</i></mdc-button>
-    <mdc-button @click="index += 1"><i class="material-icons mdc-button__icon">fast_forward</i></mdc-button>
+    <mdc-button @click="index -= 1"><i class="material-icons mdc-button__icon mdc-button mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" style="--mdc-ripple-fg-size:38.3949px; --mdc-ripple-fg-scale:2.17269; --mdc-ripple-fg-translate-start:6.98539px, 0.748938px; --mdc-ripple-fg-translate-end:12.7983px, -1.20028px;">fast_rewind</i></mdc-button>
+    <mdc-button @click="index += 1"><i class="material-icons mdc-button__icon mdc-button mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" style="--mdc-ripple-fg-size:38.3949px; --mdc-ripple-fg-scale:2.17269; --mdc-ripple-fg-translate-start:6.98539px, 0.748938px; --mdc-ripple-fg-translate-end:12.7983px, -1.20028px;">fast_forward</i></mdc-button>
   </div>
 </div>
 
