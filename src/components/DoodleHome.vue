@@ -2,7 +2,18 @@
   <div id="home">
     <div class="doodle-screen">
       <div class="doodle-screen-inner">
-        <img src="/static/img/oodle.png">
+        <div v-if="connection === 'fast'">
+          <!-- 1.3MB -->
+          <!-- ffmpeg -i doodle-theatre.mp4 -b:v 0 -crf 40 -vf scale=600:-1 output-2.mp4 -->
+          <video class="theatre" autoplay muted playsinline>
+            <source src="/static/img/doodle-theatre.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- 24MB same resolution, no audio -->
+        <!-- <img class="theatre" src="http://res.cloudinary.com/ddxwdqwkr/video/upload/c_scale,w_600/v1524282226/doodle-theatre_es8oc9.gif"/> -->
+        <div v-if="connection === 'slow'">
+          <img class="theatre" src="/static/img/doodle-theatre-poster.jpg">
+        </div>
       </div>
     </div>
 
@@ -18,6 +29,7 @@
 
 <script>
 const doodlesJsonUrl = '/static/doodles.json'
+const lowfi = ['slow-2g', '2g', '3g']
 
 const fetchDoodles = () => (fetch(doodlesJsonUrl).then(response => response.json()))
 
@@ -28,12 +40,22 @@ export default {
       'title': 'Test Doodle',
       'standalone_html': '',
       'url': ''
-    }]
+    }],
+    connection: '2g'
   }),
   mounted: function () {
     fetchDoodles().then((response) => {
       this.doodles = response
     })
+    if (navigator.connection && navigator.connection.effectiveType.length > 0) {
+      if (lowfi.indexOf(navigator.connection.effectiveType) >= 0) {
+        this.connection = 'slow'
+      } else {
+        this.connection = 'fast'
+      }
+    } else {
+      this.connection = 'slow'
+    }
   }
 }
 </script>
@@ -55,9 +77,10 @@ $film-strip-width: 20px;
   height: 60%;
 }
 
-#home .doodle-screen-inner img {
-  width: 80%;
+#home .doodle-screen-inner .theatre {
+  width: 87%;
   max-width: 430px;
+  border-radius: 15px;
 }
 
 #home .doodle-screen-inner {
@@ -72,9 +95,10 @@ $film-strip-width: 20px;
   height: 50%;
 }
 
-.landscape #home .doodle-screen-inner img {
-  max-height: 20vh;
+.landscape #home .doodle-screen-inner .theatre {
+  max-height: 38vh;
   width: auto;
+  max-width: 554px;
 }
 
 #home .doodle-section {
