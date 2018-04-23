@@ -6,6 +6,7 @@
           <!-- 1.3MB -->
           <!-- ffmpeg -i doodle-theatre.mp4 -b:v 0 -crf 40 -vf scale=600:-1 output-2.mp4 -->
           <video class="theatre" autoplay muted playsinline>
+            <source src="/static/img/doodle-theatre.webm" type="video/webm">
             <source src="/static/img/doodle-theatre.mp4" type="video/mp4">
           </video>
         </div>
