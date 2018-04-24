@@ -11,6 +11,7 @@
     "lighthouse": "source lighthouse/runLighthouse.sh"
   },
   "dependencies": {
+    "lazysizes": "^4.0.2",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.1.1",
     "material-components-web": "^0.34.1",

@@ -15,14 +15,14 @@
              slug: 'fullscreen-doodle',
              url: currentDoodle.standalone_html
           }}">
-          <img :src="currentDoodle.url" width="100%" height="100%"/>
+          <img class="lazyload" :data-src="currentDoodle.url" width="100%" height="100%"/>
         </router-link>
       </div>
     </div>
   </div>
   <div class="film-controls">
-    <mdc-button @click="index -= 1"><i class="material-icons mdc-button__icon mdc-button mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" style="--mdc-ripple-fg-size:38.3949px; --mdc-ripple-fg-scale:2.17269; --mdc-ripple-fg-translate-start:6.98539px, 0.748938px; --mdc-ripple-fg-translate-end:12.7983px, -1.20028px;">fast_rewind</i></mdc-button>
-    <mdc-button @click="index += 1"><i class="material-icons mdc-button__icon mdc-button mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" style="--mdc-ripple-fg-size:38.3949px; --mdc-ripple-fg-scale:2.17269; --mdc-ripple-fg-translate-start:6.98539px, 0.748938px; --mdc-ripple-fg-translate-end:12.7983px, -1.20028px;">fast_forward</i></mdc-button>
+    <button @click="index -= 1"><i class="material-icons mdc-button__icon mdc-button mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" style="--mdc-ripple-fg-size:38.3949px; --mdc-ripple-fg-scale:2.17269; --mdc-ripple-fg-translate-start:6.98539px, 0.748938px; --mdc-ripple-fg-translate-end:12.7983px, -1.20028px;">fast_rewind</i></button>
+    <button @click="index += 1"><i class="material-icons mdc-button__icon mdc-button mdc-ripple-upgraded mdc-ripple-upgraded--foreground-activation" style="--mdc-ripple-fg-size:38.3949px; --mdc-ripple-fg-scale:2.17269; --mdc-ripple-fg-translate-start:6.98539px, 0.748938px; --mdc-ripple-fg-translate-end:12.7983px, -1.20028px;">fast_forward</i></button>
   </div>
 </div>
 
