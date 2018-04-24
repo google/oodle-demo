@@ -11,6 +11,8 @@
     "lighthouse": "source lighthouse/runLighthouse.sh"
   },
   "dependencies": {
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-webpack-plugin": "^2.1.1",
     "material-components-web": "^0.34.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
