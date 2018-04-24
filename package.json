@@ -11,6 +11,7 @@
     "lighthouse": "source lighthouse/runLighthouse.sh"
   },
   "dependencies": {
+    "lazysizes": "^4.0.2",
     "material-components-web": "^0.34.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
