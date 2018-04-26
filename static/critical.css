@@ -1,0 +1,44 @@
+      body {
+        background: #000;
+      }
+      #app { 
+        height: 100%; 
+      }
+      .doodle-header {
+          height: 12%;
+          text-align: center;
+      }
+      .doodle-heading {
+        color: #fff;
+        display: inline-block;
+        font-size: 2.9rem;
+        font-family: 'Teko', sans-serif;
+        font-weight: 300;
+        padding: 0 4.89vw;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      #home .doodle-screen {
+        background-size: contain;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height: 60%;
+      }
+      #home .doodle-screen-inner {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      #home .doodle-screen-inner .theatre {
+        width: 87%;
+        max-width: 430px;
+        border-radius: 40px;
+        border: 13px solid #d8d5d1;
+        box-shadow: 0 10px 40px -6px #000;
+      }

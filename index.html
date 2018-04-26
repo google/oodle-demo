@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>doodle</title>
-    <link rel="preload" href="https://fonts.gstatic.com/s/teko/v7/LYjCdG7kmE0gdQhfsCRgqHAtXN8.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="https://fonts.gstatic.com/s/teko/v7/LYjNdG7kmE0gfaN9pQlCpVo.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <title>Oodle</title>
+  <link rel="preload" href="https://fonts.gstatic.com/s/teko/v7/LYjCdG7kmE0gdQhfsCRgqHAtXN8.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="https://fonts.gstatic.com/s/teko/v7/LYjNdG7kmE0gfaN9pQlCpVo.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+</head>
+<body>
+  <div id="app">
+    <!--AppShell-->
+    <div class="application landscape mobile">
+      <div class="application-content">
+        <div class="application-content-inner">
+          <header class="doodle-header">
+            <h1 class="doodle-heading">
+              <a href="#/" class="router-link-exact-active router-link-active">Google I/O presents</a>
+            </h1>
+          </header>
+          <main>
+            <div id="home">
+              <div class="doodle-screen">
+                <div class="doodle-screen-inner">
+                  <div>
+                    <img class="theatre" src="/static/img/doodle-theatre-poster.jpg" />
+                  </div>
+                </div>
+              </div>
+              <section class="doodle-section">
+                <h2 class="doodle-section-classic">This week
+                  <a href="#/browse" class="doodle-section-classic-link">classic doodles</a>
+                </h2>
+              </section>
+              <section class="doodle-section">
+                <p class="doodle-section-featured">Featured movie
+                  <a href="#/offline-games/" class="doodle-section-featured-link">pony express</a>
+                </p>
+              </section>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Teko:300,400,500,600" type="text/css">
   <script src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
-  </body>
+</body>
+
 </html>
