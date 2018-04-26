@@ -71,7 +71,6 @@ $film-strip-width: 20px;
 }
 
 #home .doodle-screen {
-  background-image: url('/static/img/screen.png');
   background-size: contain;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -81,7 +80,9 @@ $film-strip-width: 20px;
 #home .doodle-screen-inner .theatre {
   width: 87%;
   max-width: 430px;
-  border-radius: 15px;
+  border-radius: 40px;
+  border: 13px solid #d8d5d1;
+  box-shadow: 0 10px 40px -6px #000;
 }
 
 #home .doodle-screen-inner {
