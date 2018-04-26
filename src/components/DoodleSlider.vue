@@ -146,4 +146,9 @@ export default {
   font-size: 32px;
   color: #fff;
 }
+
+.film-controls button {
+  background-color: transparent;
+  border: 0px;
+}
 </style>
