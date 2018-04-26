@@ -7,13 +7,14 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js",
+    "build": "node build/build.js && node critical.js",
     "lighthouse": "source lighthouse/runLighthouse.sh"
   },
   "dependencies": {
-    "lazysizes": "^4.0.2",
+    "critical": "^1.2.2",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.1.1",
+    "lazysizes": "^4.0.2",
     "material-components-web": "^0.34.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
