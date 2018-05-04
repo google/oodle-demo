@@ -165,6 +165,7 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 300;
   padding: 0 4.89vw;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .doodle-inline-icon {
