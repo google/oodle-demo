@@ -48,13 +48,13 @@ export default {
       return slug(txt)
     },
     getFirstTileIndex: function () {
-      return Math.max(Math.floor(this.doodles.length / 2) - this.stripLength / 2, 0)
+      return Math.floor(Math.max(Math.floor(this.doodles.length / 2) - this.stripLength / 2, 0))
     }
   },
   created: function () {
     this.stripLength = 4
     if (window.matchMedia('(max-width: 800px)').matches) {
-      this.stripLength = 3
+      this.stripLength = 1
     }
     if (window.matchMedia('(max-width: 400px)').matches) {
       this.stripLength = 1
@@ -109,9 +109,9 @@ export default {
 
 @media (max-width: 800px) {
   .film-tile {
-    flex: 0 0 33%;
-    max-width: 33%;
-    height: 18vw;
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 45vw;
   }
 }
 

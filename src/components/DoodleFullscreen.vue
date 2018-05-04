@@ -10,7 +10,7 @@
     </div>
 
     <section class="doodle-go-back">
-      <a href="javascript:history.go(-1)"> Go Back</a>
+      <a href="javascript:history.go(-1)"> Go Back</a> | <a v-bind:href="$route.params.url" target="_blank">View Doodle</a>
     </section>
   </div>
 </template>
@@ -29,6 +29,7 @@ export default {
 <style>
 #play {
   height: 100%;
+  margin-top: 30px;
 }
 
 .mobile.landscape #play {
