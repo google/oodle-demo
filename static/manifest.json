@@ -1,15 +1,20 @@
 {
-  "name": "Doodle IO",
-  "short_name": "DoodleIO",
+  "name": "Oodle",
+  "short_name": "Oodle",
   "icons": [
     {
-      "src": "/static/img/icons/icon.png",
+      "src": "/static/img/192x192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/img/512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#000000",
-  "theme_color": "#4DBA87"
+  "theme_color": "#000000"
 }
