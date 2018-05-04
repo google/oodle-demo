@@ -12,6 +12,7 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const imageminMozjpeg = require('imagemin-mozjpeg')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
 const env = require('../config/prod.env')
 
@@ -130,6 +131,25 @@ const webpackConfig = merge(baseWebpackConfig, {
           progressive: true
         })
       ]
+    }),
+    new WorkboxPlugin.GenerateSW({
+      swDest: 'service-worker.js',
+      include: [/\.js$/, /\.html$/, /\.css$/, /\.png$/, /\.jpg$/, /\.gif$/, /\.woff2$/],
+      exclude: [/service-worker.*\.js/, /^precache-manifest\..+\.js/, /\.js.map$/, /\.css.map/],
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        {
+          // Match any request ends with .png, .jpg, .jpeg or .svg.
+          urlPattern: /\.(?:html|js|css|jpg|png|gif|json|woff2|mp4|webm)$/,
+
+          // Apply a cache-first strategy.
+          handler: 'cacheFirst'
+        },
+        {
+          urlPattern: new RegExp('https://fonts.(?:googleapis|gstatic|google).com/(.*)'),
+          handler: 'cacheFirst'
+        }]
     })
   ]
 })
