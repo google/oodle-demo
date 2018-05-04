@@ -2,7 +2,7 @@
   <div id="offline">
     <div class="doodle-screen">
       <div class="doodle-screen-inner">
-        <iframe src="/static/ponyexpress15.htm" frameborder="0"  scrolling="no" height="240px" width="420px" ></iframe>
+        <iframe src="/static/ponyexpress15.htm" frameborder="0"  scrolling="no" height="510px" width="800px" ></iframe>
       </div>
     </div>
     <section class="doodle-info-link" @click="showModal = true">
@@ -52,6 +52,9 @@ export default {
 
 #offline .doodle-screen-inner iframe {
   /* width: 100%; */
+  /* margin: 0 auto; */
+  width: 430px;
+  margin-top: 20px;
 }
 
 #offline .doodle-screen-inner {
