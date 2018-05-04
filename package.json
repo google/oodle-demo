@@ -8,10 +8,12 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js && node critical.js",
+    "import-doodles": "babel-node importer.js",
     "lighthouse": "source lighthouse/runLighthouse.sh"
   },
   "dependencies": {
     "critical": "^1.2.2",
+    "global": "^4.3.2",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.1.1",
     "lazysizes": "^4.0.2",
