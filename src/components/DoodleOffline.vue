@@ -51,8 +51,6 @@ export default {
 }
 
 #offline .doodle-screen-inner iframe {
-  /* width: 100%; */
-  /* margin: 0 auto; */
   width: 430px;
   margin-top: 20px;
 }
@@ -72,7 +70,6 @@ export default {
 }
 
 .mobile #offline .doodle-screen-inner iframe {
-  width: 100%;
   height: 100%;
   min-height: 240px;
 }
@@ -92,6 +89,11 @@ export default {
   overflow-y: scroll;
   text-align: left;
   margin: 0 3vw;
+  max-width: calc(100% - 6vw);
+}
+
+#offline .modal iframe {
+  width: 100%;
 }
 
 #offline .doodle-text p {
