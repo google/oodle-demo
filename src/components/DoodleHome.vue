@@ -5,7 +5,7 @@
         <div v-if="connection === 'fast'">
           <!-- 1.3MB -->
           <!-- ffmpeg -i doodle-theatre.mp4 -b:v 0 -crf 40 -vf scale=600:-1 output-2.mp4 -->
-          <video class="theatre" autoplay muted playsinline>
+          <video class="theatre" autoplay muted playsinline control>
             <source src="/static/img/doodle-theatre.webm" type="video/webm">
             <source src="/static/img/doodle-theatre.mp4" type="video/mp4">
           </video>
@@ -55,7 +55,16 @@ export default {
         this.connection = 'fast'
       }
     } else {
-      this.connection = 'slow'
+      // Hotfix: allow faster mode for some tablet devices that
+      // don't support navigator.connection, but still support falling
+      // back to slow mode for the majority.
+      if (window.screen.height / window.screen.width === 1366 / 1024) {
+        this.connection = 'fast'
+      } else if (window.screen.height / window.screen.width === 1112 / 834) {
+        this.connection = 'fast'
+      } else {
+        this.connection = 'slow'
+      }
     }
   }
 }
