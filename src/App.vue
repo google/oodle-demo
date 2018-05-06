@@ -4,7 +4,7 @@
       <div class="application-content-inner">
         <header class="doodle-header">
           <h1 class="doodle-heading" >
-            <router-link to="/">Google I/O presents</router-link>
+            <router-link to="/">Oodle Theater</router-link>
           </h1>
         </header>
         <main>
