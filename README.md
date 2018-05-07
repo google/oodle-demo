@@ -25,9 +25,8 @@ npm run build
 For any issues or feature requests, we would really appreciate it if you report using our issue tracker.
 
 ## Contributing
-Contributing to Oodle is subject to the guidelines in the
-[CONTRIBUTING.md](CONTRIBUTING.md) file, which, in brief, requires that
-contributors sign the [Individual Contributor License Agreement (CLA)][3].
+Contributing to Oodle is subject to the guidelines in the [CONTRIBUTING.md](CONTRIBUTING.md) file, which, in brief, requires that
+contributors sign the [Individual Contributor License Agreement (CLA)](https://cla.developers.google.com/about/google-corporate).
 
 ## Credits
 
