@@ -18,7 +18,7 @@
     "imagemin-webpack-plugin": "^2.1.1",
     "lazysizes": "^4.0.2",
     "material-components-web": "^0.34.1",
-    "node-sass": "^4.8.3",
+    "node-sass": "^7.0.0",
     "sass-loader": "^6.0.7",
     "slugify": "^1.2.9",
     "vue": "^2.5.2",
